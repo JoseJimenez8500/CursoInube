@@ -1,0 +1,173 @@
+Ejercicio 1: Hola usuario
+Planteamiento:
+Quieres que el programa salude al usuario por su nombre.
+
+Piensa:
+¿Cómo se guarda un texto que el usuario escribe?
+    Usando una implementacion de la clase 'Scanner()'
+
+¿Cómo se muestra un mensaje por pantalla?
+    a traves del metodo 'println()' que permite imprimir el contenido en consola
+
+¿Cómo unir (concatenar) el texto “Hola” con el nombre?
+    Se pueden concatenar cadenas usando el operador '+' al final a en medio del metodo println()
+Reto:
+Imagina que el usuario escribe “Carlos”. ¿Qué debería mostrar el programa?
+    Hola Carlos
+
+🧠 Ejercicio 2: Suma de dos números
+Planteamiento:
+El usuario introduce dos números, el programa debe mostrar su suma.
+
+Piensa:
+¿Qué tipo de datos representan los números?
+    Representan tipos de datos numericos
+
+¿Qué operación matemática debes hacer?
+    Una suma o adicion
+
+¿Cómo mostrar el resultado junto con un mensaje claro?
+    Se muestra el resultado usando el metodo println() usando un mensaje claro
+    como: "La suma de los numero ingresados es:" y contatenando el resultado
+Reto:
+Si el usuario escribe 8 y 12, ¿qué resultado esperas que aparezca?
+    "La suma de los numero ingresados es: 20"
+
+🧠 Ejercicio 3: Número par o impar
+Planteamiento:
+Determinar si un número es par o impar.
+
+Piensa:
+¿Qué significa que un número sea par? (¿qué operación lo demuestra?)
+    Significa que si es dividido entre 2 su residuo sera 0, se demuestra con la operacion "modulo (%)"
+¿Qué pasa si el número no cumple esa condición?
+    Significa que es impar
+¿Cómo plantearías la decisión en palabras, antes del código?
+    Si un numero es dividido entre 2 y su residuo es 0 significa que es par
+    en caso contrario en imar
+Reto:
+Haz una lista rápida de 5 números y marca cuáles son pares e impares. ¿Cómo lo decides mentalmente?
+    {1,2,3,4,5}
+    -Pares: {2,4}
+    -Impares: {1,3,5}
+    Se puede saber si un numero es par si termina en 2,4,6,8
+    o impar si termina en 1,3,5,7,9
+
+🧠 Ejercicio 4: Mayor de dos números
+Planteamiento:
+El programa debe decir cuál de los dos números es mayor o si son iguales.
+
+Piensa:
+¿Qué comparaciones necesitas hacer entre los dos valores?
+    -Operacion mayor que
+    -Operacion menor que
+    -Operacion igual
+¿Qué resultados posibles existen?
+    -Que el primer numero sea mayor
+    -Que el segundo numero sea mayor
+    -Que los 2 numeros sean iguales
+¿Qué mensaje mostrarías en cada caso?
+    -"El primer numero es mayor"
+    -"El segundo numero es mayor"
+    -"Los numeros son iguales"
+Reto:
+Si tienes los números 10 y 15, ¿qué debería decir el programa?
+    "El segundo numero es mayor"
+
+🧠 Ejercicio 5: Tabla de multiplicar
+Planteamiento:
+Mostrar la tabla de multiplicar de un número del 1 al 10.
+
+Piensa:
+¿Qué patrón sigue una tabla de multiplicar?
+    Es un incremento constante en del mismo numero cierta cantidad de veces
+¿Qué sucede si el número cambia?
+    el resultado cambia
+¿Cómo repetirías una acción varias veces (repetición/loop)?
+    usando alguna estructura de control como while o for
+Reto:
+Imagina que el número es 4. Enumera mentalmente: 4×1, 4×2, 4×3... hasta 4×10. ¿Qué notas que se repite?
+    el primer numero en la multiplicacion se repite
+
+🧠 Ejercicio 6: Contador del 1 al N
+Planteamiento:
+Mostrar todos los números desde el 1 hasta un número que el usuario indique.
+
+Piensa:
+¿Qué ocurre si el usuario pone 5?
+    Se enumeran los numeros del 1 al 5
+¿Cómo puedes generar una secuencia de números consecutivos?
+    Se pueden generar usando una estructura de control que permita repetir una operacion
+    como el ciclo for
+¿Qué variable controlaría cuántas veces repites el proceso?
+    Se usa generalmente una variable indice que incrementa en cada repeticion del ciclo
+Reto:
+Hazlo tú: cuenta del 1 al número que quieras, pero imagina que una máquina lo hace. ¿Qué instrucciones necesitaría?
+    -Establecer el indice en 1
+    -Establecer que el fin del ciclo sea el numero proporcionado
+    -Iniciar el ciclo aumentado en 1 cada vez
+
+🧠 Ejercicio 7: Suma acumulativa
+Planteamiento:
+Calcular la suma de los números del 1 al N.
+
+Piensa:
+¿Qué patrón sigue la suma? (1 + 2 + 3 + ... + N)
+    Un incremento de 1 vada vez hasta n empezando desde 1
+¿Podrías ir sumando número por número?
+    Si
+¿Qué necesitas guardar durante el proceso?
+    Se necesita guardar la suma anterior para sumar el numero que continua
+Reto:
+Si N = 5 → 1 + 2 + 3 + 4 + 5 = 15 ¿Cómo podrías llegar a ese 15 sin hacer la cuenta completa cada vez?
+    Existe una formula que permite realizar la suma del 1 al n -> (n(n+1))/2
+
+🧠 Ejercicio 8: Promedio de tres números
+Planteamiento:
+Calcular el promedio de tres valores numéricos.
+
+Piensa:
+¿Qué operación define el promedio?
+    La suma de los valores entre la cantidad de valores
+¿Qué pasos necesitas para calcularlo (sumar → dividir)?
+    -sumar los valores
+    -dividir entre la cantidad de valores
+¿Qué tipo de resultado esperas (entero o decimal)?
+    Decimal
+Reto:
+Si tienes 70, 80 y 90, ¿qué promedio obtienes?
+    80
+
+🧠 Ejercicio 9: Calificación aprobatoria
+Planteamiento:
+Decidir si una calificación es aprobatoria o reprobatoria.
+
+Piensa:
+¿Cuál es el valor mínimo para aprobar?
+    60
+¿Qué comparación necesitas hacer?
+    -Mayor igual que (>=)
+¿Cómo expresas el resultado como texto (“Aprobado” o “Reprobado”)?
+    Aprobado
+Reto:
+Si el usuario escribe 59, ¿qué diría tu programa? ¿Y si escribe 60?
+    -Si escribe 59 -> "Reprobado"
+    -si escribe 60 -> "Aprobado"
+
+🧠 Ejercicio 10: Conversor de temperatura
+Planteamiento:
+Convertir grados Celsius a Fahrenheit.
+
+Piensa:
+¿Qué fórmula necesitas aplicar?
+    F = (C(9/5))+32
+¿Qué pasos seguirías para obtener el resultado?
+    -Multiplicar grados celcius por 9/5
+    -Sumar 32 al resultado
+
+¿Qué pasa si el usuario ingresa un número negativo?
+    El resultado puede ser negativo o posiivo dependiendo del valor
+Reto:
+Si C = 0 → F = (0×9/5)+32 → 32 ¿Puedes hacerlo con otro valor, por ejemplo, C=100?
+    F = (100*9/5)+32
+    F = 212
