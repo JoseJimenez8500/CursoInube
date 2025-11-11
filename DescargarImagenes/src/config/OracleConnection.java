@@ -20,9 +20,9 @@ public class OracleConnection {
     private Connection connection;
 
     //Datos de configuracion de la conexion a Oracle
-    private final String URL = "jdbc:oracle:thin:@localhost:1521:XE";
-    private final String USER = "scott";
-    private final String PASSWORD = "tiger";
+    private final String URL = "jdbc:oracle:thin:@localhost:1521:xe";
+    private final String USER = "imagenes";
+    private final String PASSWORD = "imagenes";
 
     /**
      * Constructor privado
