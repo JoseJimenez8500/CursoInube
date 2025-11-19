@@ -20,4 +20,14 @@ public class ProductoServiceImpl implements ProductoService {
         //LLamada a la capa Dao
         repository.guardar(producto);
     }
+
+    @Override
+    public void borrar(String idProducto) {
+        repository.borrar(idProducto);
+    }
+
+    @Override
+    public List<Producto> obtenerProductos() {
+        return repository.obtenerProductos();
+    }
 }

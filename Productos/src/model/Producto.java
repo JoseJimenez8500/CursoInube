@@ -29,6 +29,14 @@ public class Producto {
          this.fechaCreacion = fechaCreacion;
      }
 
+    public Producto(String idProducto, String nombreProducto, double precio, Date fechaCreacion) {
+        //Genera un identificador unico (UUID) de manera automatica
+        this.idProducto = idProducto;
+        this.nombreProducto = nombreProducto;
+        this.precio = precio;
+        this.fechaCreacion = fechaCreacion;
+    }
+
     public Date getFechaCreacion() {
         return fechaCreacion;
     }

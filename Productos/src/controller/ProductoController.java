@@ -25,5 +25,13 @@ public class ProductoController {
         service.guardar(producto);
     }
 
+    public List<Producto> obtenerProductos() {
+        return service.obtenerProductos();
+    }
+
+    public void borrarProducto(String idProducto) {
+        service.borrar(idProducto);
+    }
+
 
 }

@@ -1,5 +1,6 @@
 import config.OracleConnection;
 import controller.ProductoController;
+import model.Producto;
 
 import java.util.Scanner;
 
@@ -14,6 +15,14 @@ public class Main {
         java.sql.Date fecha = new java.sql.Date(System.currentTimeMillis());
 
         ProductoController controller = new ProductoController();
-        controller.nuevoProducto("Chetos", 15, fecha);
+
+        //controller.nuevoProducto("Chetos", 15, fecha);
+
+//        for(Producto producto : controller.obtenerProductos()){
+//            System.out.println(producto);
+//        }
+
+        controller.borrarProducto("1234567");
+
     }
 }
