@@ -30,4 +30,7 @@ public class Telefono {
 
     @Column(name = "TELEFONO", nullable = false, length = 15)
     private String telefono; //VARCHAR2(15) se mapea a String
+
+    @Column(name="ACTIVO", nullable = false)
+    private Integer activo = 1;
 }

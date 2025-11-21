@@ -3,7 +3,6 @@ package com.inube.Facturas.mvcController;
 
 import com.inube.Facturas.model.Cliente;
 import com.inube.Facturas.service.ClienteService;
-import org.hibernate.annotations.ConcreteProxy;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -23,6 +22,7 @@ public class ClienteMvcController {
     //Inyeccion por constructor(Recomendada).
     public ClienteMvcController(ClienteService clienteService) {
         this.clienteService = clienteService;
+
     }
 
     //Listado de cliente

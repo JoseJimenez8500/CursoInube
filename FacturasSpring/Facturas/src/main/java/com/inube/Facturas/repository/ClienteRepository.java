@@ -23,12 +23,13 @@ public interface ClienteRepository extends JpaRepository<Cliente, Long> {
      */
 
     @Query("""
-            SELECT c 
+            SELECT c
             FROM Cliente c
             LEFT JOIN FETCH c.telefonos
             WHERE c.idCliente = :id
             """)
     Optional<Cliente> findByIdWithPhones(Long id);
+
 
     //Spring Data JPA genera automaticamente esta consulta basada en el nombre del metodo.
     //Select * from CLIENTES Where APATERNO = ?
