@@ -44,6 +44,7 @@
             <thead class="table-dark">
             <tr>
                 <th>Telefono</th>
+                <th>Cliente</th>
                 <th>Activo</th>
                 <th>Acciones</th>
             </tr>
@@ -51,6 +52,7 @@
             <tbody>
             <tr th:each="telefono: ${telefonos}" th:classappend="${telefono.activo == 0}? 'inactive'">
                 <td th:text="${telefono.telefono}"></td>
+                <td th:text="${telefono.cliente.nombre + ' ' + telefono.cliente.apellidoPaterno + ' ' + (telefono.cliente.apellidoMaterno != null ? telefono.cliente.apellidoMaterno: '-')}"></td>
                 <td class="text-center">
                 <span th:text="${telefono.activo == 1 ? 'Si' : 'No'}"
                       th:class="${telefono.activo == 0} ? 'text-danger fw-bold' : 'fw-bold'"></span>

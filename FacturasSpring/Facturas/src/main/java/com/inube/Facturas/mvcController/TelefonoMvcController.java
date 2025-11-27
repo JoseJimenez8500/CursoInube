@@ -2,18 +2,23 @@ package com.inube.Facturas.mvcController;
 
 import com.inube.Facturas.model.Cliente;
 import com.inube.Facturas.model.Telefono;
+import com.inube.Facturas.service.ClienteService;
 import com.inube.Facturas.service.TelefonoService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @Controller
 @RequestMapping("/web/telefonos")
 public class TelefonoMvcController {
     private TelefonoService telefonoService;
+    private ClienteService clienteService;
 
-    public TelefonoMvcController(TelefonoService telefonoService) {
+    public TelefonoMvcController(TelefonoService telefonoService, ClienteService clienteService) {
         this.telefonoService = telefonoService;
+        this.clienteService = clienteService;
     }
 
     @GetMapping
@@ -49,6 +54,7 @@ public class TelefonoMvcController {
             telefono = new Telefono();
             telefono.setActivo(1);
             model.addAttribute("action", "new");
+            model.addAttribute("activos", clienteService.findActivos());
         }
         model.addAttribute("telefono", telefono);
         return "telefonos/form"; // muestra form.html

@@ -28,8 +28,30 @@
                     <input type="text" id="telefono" th:field="*{telefono}"
                            class="form-control" required>
                 </div>
-            </div>
 
+                <div th:if="${action == 'edit'}">
+                    <div class="col-md-6">
+                        <label for="cliente" class="form-label">IdCliente</label>
+                        <input type="text" id="cliente" th:field="*{cliente.idCliente}"
+                               class="form-control" required>
+                    </div>
+                </div>
+
+
+                <div th:if="${action == 'new'}">
+                    <div class="col-md-6">
+                        <label for="clienteNew" class="form-label">Cliente</label>
+                        <select th:field="*{cliente}" id="clienteNew">
+                            <option value="" disabled selected>Seleccione un cliente</option>
+                            <option th:each="c : ${activos}"
+                                    th:value="${c.idCliente}"
+                                    th:text="${c.idCliente}">
+                            </option>
+                        </select>
+                    </div>
+                </div>
+
+            </div>
                 <!-- Botones -->
                 <div class="mt-4 d-flex justify-content-between">
                     <a th:href="@{/web/telefonos}" class="btn btn-secondary">

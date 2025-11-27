@@ -1,5 +1,6 @@
 package com.inube.Facturas.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -13,7 +14,6 @@ import lombok.NoArgsConstructor;
 @Table(name = "TELEFONOS")
 public class Telefono {
     @Id
-
     //Configuracion para bases de datos Oracle (secuencia)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "telefono_seq")
     @SequenceGenerator(name= "telefono_seq", sequenceName = "SEC_ID_TELEFONO", allocationSize = 1)
@@ -23,6 +23,7 @@ public class Telefono {
     //Relacion con la tabla CLIENTES
     //Muchos telefonos pueden pertenecer a un cliente (ManyToOne)
     @ManyToOne
+    @JsonIgnore
     @JoinColumn(name = "ID_CLIENTE", nullable = false,
         referencedColumnName = "ID_CLIENTE",
         foreignKey = @jakarta.persistence.ForeignKey(name= "FK_ID_CLIENTE_TELEFONOS"))
