@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: inube-authentication-service
+  config:
+    import: "configserver:http://localhost:8105"

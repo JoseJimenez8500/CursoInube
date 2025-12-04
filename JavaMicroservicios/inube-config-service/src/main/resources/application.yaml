@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: inube-config-service
+
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Oscar-SanchezG/inube-repo-micros.git
+          default-label: main
+          password:
+          username:
+
+server:
+  port: 8105
+
+Logging:
+  Level:
+    org.springframework.cloud.config: DEBUG
+    org.eclipse.jgit: DEBUG
+    org.springframework.cloud.vault: DEBUG
